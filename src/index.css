@@ -158,17 +158,19 @@ body {
 
 .square {
   background: #fff;
-  border: 1px solid #999;
+  border: 1px solid rgba(255, 255, 255, 0.35);
   float: left;
   font-size: 4.4rem;
   font-weight: bold;
   line-height: 34px;
   height: 114px;
-  margin-right: -1px;
-  margin-top: -1px;
+  margin-right: 14px;
+  margin-top: 14px;
   padding: 0;
   text-align: center;
   width: 114px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .winning-square {
@@ -180,7 +182,7 @@ body {
 .right {
   flex: 1;
   align-self: self-start;
-  margin-top: 40px;
+  margin-top: 55px;
 }
 
 .game-info .btn {
@@ -190,6 +192,7 @@ body {
 
 .game-info .btn button {
   font-size: 2.2rem;
+  margin-left: 90px;
 }
 
 .game-info button {
