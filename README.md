@@ -8,5 +8,4 @@ Implement these features:
 6. Upload to a public host.
 
 ## Deployment
-
 https://HQDuy47.github.io/tic-tac-toe
