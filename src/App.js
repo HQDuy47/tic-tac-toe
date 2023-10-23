@@ -156,7 +156,7 @@ export default function Game() {
         </div>
       </div>
       <footer>
-        <p class="copyright">© DuyHQ</p>
+        <p className="copyright">© DuyHQ</p>
       </footer>
     </>
   );
