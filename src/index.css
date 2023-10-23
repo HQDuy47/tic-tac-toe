@@ -111,6 +111,7 @@ html {
 body {
   font-size: 1.6rem;
   font-family: sans-serif;
+  background-color: #e8e8e8;
 }
 
 .container {
@@ -149,11 +150,13 @@ body {
 }
 
 .X {
-  color: red;
+  color: #c3c3c3;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .O {
-  color: blue;
+  color: rgba(51, 51, 51, 0.6);
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .square {
@@ -173,8 +176,13 @@ body {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+.square:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
 .winning-square {
-  background-color: yellow;
+  /* background-color: #009087; */
+  background: #d3d3d3;
   color: #fff;
 }
 
@@ -182,7 +190,7 @@ body {
 .right {
   flex: 1;
   align-self: self-start;
-  margin-top: 55px;
+  margin-top: 45px;
 }
 
 .game-info .btn {
@@ -191,12 +199,67 @@ body {
 }
 
 .game-info .btn button {
-  font-size: 2.2rem;
+  font-size: 2rem;
+  padding: 4px 14px;
   margin-left: 90px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 10px;
 }
 
-.game-info button {
+.game-info ol button {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #090909;
+  padding: 0.1em 1.1em;
   font-size: 1.7rem;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.game-info ol button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.game-info ol button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.game-info ol button:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #009087;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.game-info button:hover {
+  transform: translateX(6px);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
 }
 
 .game-info li {
